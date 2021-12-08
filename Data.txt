@@ -1,0 +1,34 @@
+
+- User:
+ + Id
+ + Username
+ + Password
+ + RoleId
+ + Lastname
+ + Firstname
+ + PhoneNumber
+
+- Role:
+ + Id
+ + Name
+ + Description
+
+- Goods:
+ + Id
+ + Name
+ + Price
+ + Image
+ + Count
+ + CategoryId
+
+- Category:
+ + Id
+ + Name
+ + Image
+ 
+- Bill
+ + Id
+ + Timestamp
+ + Total
+ + UserId
+
