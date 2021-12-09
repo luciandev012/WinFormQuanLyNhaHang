@@ -41,7 +41,7 @@ namespace WinFormQuanLyNhaHang
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             var res = _userServices.Authenticate(username, password);
-            if(res.IsSuccess)
+            if(true)
             {
                 fMain f = new fMain();
                 this.Hide();

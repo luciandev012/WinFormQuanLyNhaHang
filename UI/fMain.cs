@@ -15,6 +15,19 @@ namespace WinFormQuanLyNhaHang.UI
         public fMain()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        #region Method
+        public void LoadData()
+        {
+            
+        }
+        #endregion
+
+        private void btnTableMng_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }
