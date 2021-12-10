@@ -57,6 +57,7 @@ namespace WinFormQuanLyNhaHang
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(392, 29);
             this.txtUsername.TabIndex = 1;
+            this.txtUsername.Text = "admin";
             // 
             // label1
             // 
@@ -86,6 +87,7 @@ namespace WinFormQuanLyNhaHang
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(392, 29);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.Text = "admin";
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // label2

@@ -30,11 +30,11 @@ namespace WinFormQuanLyNhaHang.UI
         private void InitializeComponent()
         {
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.lblUserFullname = new System.Windows.Forms.Label();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnTableMng = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.lblUserFullname = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,6 +50,15 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(232, 728);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // lblUserFullname
+            // 
+            this.lblUserFullname.Location = new System.Drawing.Point(6, 0);
+            this.lblUserFullname.Name = "lblUserFullname";
+            this.lblUserFullname.Size = new System.Drawing.Size(223, 76);
+            this.lblUserFullname.TabIndex = 1;
+            this.lblUserFullname.Text = "label1";
+            this.lblUserFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnAdmin
             // 
@@ -89,15 +98,6 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1023, 728);
             this.pnlMain.TabIndex = 1;
-            // 
-            // lblUserFullname
-            // 
-            this.lblUserFullname.Location = new System.Drawing.Point(6, 0);
-            this.lblUserFullname.Name = "lblUserFullname";
-            this.lblUserFullname.Size = new System.Drawing.Size(223, 76);
-            this.lblUserFullname.TabIndex = 1;
-            this.lblUserFullname.Text = "label1";
-            this.lblUserFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fMain
             // 

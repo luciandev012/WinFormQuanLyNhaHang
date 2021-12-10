@@ -26,5 +26,23 @@ namespace WinFormQuanLyNhaHang.Services
             _context.Bills.Add(bill);
             return _context.SaveChanges();
         }
+
+        public float GetTotal(int tableId)
+        {
+            return _context.Bills.Where(x => x.TableId == tableId && x.IsPaid == false).Select(x => x.Total).FirstOrDefault();
+        }
+        public void UpdateTotal(int tableId, float Price)
+        {
+            var bill = _context.Bills.Where(x => x.TableId == tableId && x.IsPaid == false).FirstOrDefault();
+
+            bill.Total = Price;
+            _context.SaveChanges();
+        }
+        public void Pay(int tableId)
+        {
+            var bill = _context.Bills.Where(x => x.TableId == tableId && x.IsPaid == false).FirstOrDefault();
+            bill.IsPaid = true;
+            _context.SaveChanges();
+        }
     }
 }
