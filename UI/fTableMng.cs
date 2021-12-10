@@ -102,7 +102,32 @@ namespace WinFormQuanLyNhaHang.UI
 
         private void btnAddDrink_Click(object sender, EventArgs e)
         {
-
+            if (!tableStatus)
+            {
+                MessageBox.Show("Bàn trống chưa được đặt!", "Thông báo");
+            }
+            else
+            {
+                fAddDrink drink = new fAddDrink();
+                drink.ShowDialog();
+                var listGoodId = drink.ListGoodId;
+                if (listGoodId != null)
+                {
+                    foreach (var item in listGoodId)
+                    {
+                        if (_billDetailServices.HasGood(item, tableId))
+                        {
+                            _billDetailServices.UpdateCount(item, tableId);
+                        }
+                        else
+                        {
+                            _billDetailServices.Create(item, tableId);
+                        }
+                    }
+                }
+                ShowBill();
+                UpdateTotal();
+            }
         }
 
         private void btnPay_Click(object sender, EventArgs e)
