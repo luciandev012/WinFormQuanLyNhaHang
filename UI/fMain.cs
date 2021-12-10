@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormQuanLyNhaHang.Common;
 
 namespace WinFormQuanLyNhaHang.UI
 {
@@ -21,13 +22,15 @@ namespace WinFormQuanLyNhaHang.UI
         #region Method
         public void LoadData()
         {
-            
+            lblUserFullname.Text = "Xin chào " + UserSession.FullName + "!";  
         }
         #endregion
 
         private void btnTableMng_Click(object sender, EventArgs e)
         {
-            
+            pnlMain.Controls.Clear();
+            var table = new fTableMng();
+            pnlMain.Controls.Add(table);
         }
     }
 }

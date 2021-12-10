@@ -34,12 +34,14 @@ namespace WinFormQuanLyNhaHang.UI
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnTableMng = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.lblUserFullname = new System.Windows.Forms.Label();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlMenu.Controls.Add(this.lblUserFullname);
             this.pnlMenu.Controls.Add(this.btnAdmin);
             this.pnlMenu.Controls.Add(this.btnStatistic);
             this.pnlMenu.Controls.Add(this.btnTableMng);
@@ -51,7 +53,7 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(6, 219);
+            this.btnAdmin.Location = new System.Drawing.Point(6, 297);
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(6);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(223, 105);
@@ -61,7 +63,7 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             // btnStatistic
             // 
-            this.btnStatistic.Location = new System.Drawing.Point(6, 113);
+            this.btnStatistic.Location = new System.Drawing.Point(6, 189);
             this.btnStatistic.Margin = new System.Windows.Forms.Padding(6);
             this.btnStatistic.Name = "btnStatistic";
             this.btnStatistic.Size = new System.Drawing.Size(223, 105);
@@ -71,7 +73,7 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             // btnTableMng
             // 
-            this.btnTableMng.Location = new System.Drawing.Point(6, 6);
+            this.btnTableMng.Location = new System.Drawing.Point(6, 82);
             this.btnTableMng.Margin = new System.Windows.Forms.Padding(6);
             this.btnTableMng.Name = "btnTableMng";
             this.btnTableMng.Size = new System.Drawing.Size(223, 105);
@@ -87,6 +89,15 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1023, 728);
             this.pnlMain.TabIndex = 1;
+            // 
+            // lblUserFullname
+            // 
+            this.lblUserFullname.Location = new System.Drawing.Point(6, 0);
+            this.lblUserFullname.Name = "lblUserFullname";
+            this.lblUserFullname.Size = new System.Drawing.Size(223, 76);
+            this.lblUserFullname.TabIndex = 1;
+            this.lblUserFullname.Text = "label1";
+            this.lblUserFullname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // fMain
             // 
@@ -111,5 +122,6 @@ namespace WinFormQuanLyNhaHang.UI
         private System.Windows.Forms.Button btnStatistic;
         private System.Windows.Forms.Button btnTableMng;
         private System.Windows.Forms.Panel pnlMain;
+        private System.Windows.Forms.Label lblUserFullname;
     }
 }

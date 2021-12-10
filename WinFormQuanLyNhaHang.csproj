@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Response.cs" />
+    <Compile Include="Common\UserSession.cs" />
     <Compile Include="Data\Entities\BillDetail.cs" />
     <Compile Include="Data\Entities\Category.cs" />
     <Compile Include="Data\Entities\Good.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\BillServices.cs" />
     <Compile Include="Services\TableServices.cs" />
     <Compile Include="Services\UserServices.cs" />
     <Compile Include="UI\fMain.cs">

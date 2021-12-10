@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using WinFormQuanLyNhaHang.Common;
 using WinFormQuanLyNhaHang.Services;
 using WinFormQuanLyNhaHang.UI;
 
@@ -41,8 +42,11 @@ namespace WinFormQuanLyNhaHang
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             var res = _userServices.Authenticate(username, password);
-            if(true)
+            if(res.IsSuccess)
             {
+                UserSession.UserId = res.ResponseObj.Id;
+                UserSession.PhoneNumber = res.ResponseObj.PhoneNumber;
+                UserSession.FullName = res.ResponseObj.FirstName + " " + res.ResponseObj.Lastname;
                 fMain f = new fMain();
                 this.Hide();
                 f.ShowDialog();

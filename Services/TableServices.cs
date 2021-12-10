@@ -16,5 +16,18 @@ namespace WinFormQuanLyNhaHang.Services
         {
             return _context.Tables.ToList();
         }
+        public void ChangeStatus(int id)
+        {
+            var table = _context.Tables.Find(id);
+            if(table.Status)
+            {
+                table.Status = false;
+            }
+            else
+            {
+                table.Status = true;
+            }
+            _context.SaveChanges();
+        }
     }
 }
