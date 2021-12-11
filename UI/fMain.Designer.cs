@@ -35,7 +35,9 @@ namespace WinFormQuanLyNhaHang.UI
             this.btnStatistic = new System.Windows.Forms.Button();
             this.btnTableMng = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.fAdmin1 = new WinFormQuanLyNhaHang.UI.fAdmin();
             this.pnlMenu.SuspendLayout();
+            this.pnlMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -69,6 +71,7 @@ namespace WinFormQuanLyNhaHang.UI
             this.btnAdmin.TabIndex = 0;
             this.btnAdmin.Text = "Quản lý món ăn";
             this.btnAdmin.UseVisualStyleBackColor = true;
+            this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
             // 
             // btnStatistic
             // 
@@ -93,11 +96,21 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             // pnlMain
             // 
+            this.pnlMain.Controls.Add(this.fAdmin1);
             this.pnlMain.Location = new System.Drawing.Point(243, 15);
             this.pnlMain.Margin = new System.Windows.Forms.Padding(6);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(1023, 728);
             this.pnlMain.TabIndex = 1;
+            // 
+            // fAdmin1
+            // 
+            this.fAdmin1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fAdmin1.Location = new System.Drawing.Point(0, 0);
+            this.fAdmin1.Margin = new System.Windows.Forms.Padding(6);
+            this.fAdmin1.Name = "fAdmin1";
+            this.fAdmin1.Size = new System.Drawing.Size(1023, 728);
+            this.fAdmin1.TabIndex = 0;
             // 
             // fMain
             // 
@@ -111,6 +124,7 @@ namespace WinFormQuanLyNhaHang.UI
             this.Name = "fMain";
             this.Text = "Phần mềm quản lý nhà hàng";
             this.pnlMenu.ResumeLayout(false);
+            this.pnlMain.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -123,5 +137,6 @@ namespace WinFormQuanLyNhaHang.UI
         private System.Windows.Forms.Button btnTableMng;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label lblUserFullname;
+        private fAdmin fAdmin1;
     }
 }

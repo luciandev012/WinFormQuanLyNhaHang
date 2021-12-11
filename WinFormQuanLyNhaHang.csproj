@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\BillDetailViewModel.cs" />
+    <Compile Include="Common\GoodVM.cs" />
     <Compile Include="Common\Response.cs" />
     <Compile Include="Common\UserSession.cs" />
     <Compile Include="Data\Entities\BillDetail.cs" />
@@ -107,6 +108,12 @@
     <Compile Include="UI\fAddFood.Designer.cs">
       <DependentUpon>fAddFood.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\fAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\fAdmin.Designer.cs">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +154,9 @@
     <EmbeddedResource Include="UI\fAddFood.resx">
       <DependentUpon>fAddFood.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UI\fAdmin.resx">
+      <DependentUpon>fAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,7 +177,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Asset\Image\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Asset\Icon\icons8-back-to-64.png" />
   </ItemGroup>

@@ -13,6 +13,8 @@ namespace WinFormQuanLyNhaHang.UI
 {
     public partial class fMain : Form
     {
+        private fAdmin fAdmin;
+        private fTableMng fTableMng;
         public fMain()
         {
             InitializeComponent();
@@ -22,15 +24,23 @@ namespace WinFormQuanLyNhaHang.UI
         #region Method
         public void LoadData()
         {
-            lblUserFullname.Text = "Xin chào " + UserSession.FullName + "!";  
+            lblUserFullname.Text = "Xin chào " + UserSession.FullName + "!";
+            fAdmin = new fAdmin();
+            fTableMng = new fTableMng();
+            pnlMain.Controls.Add(fAdmin);
+            pnlMain.Controls.Add(fTableMng);
         }
         #endregion
 
         private void btnTableMng_Click(object sender, EventArgs e)
         {
-            pnlMain.Controls.Clear();
-            var table = new fTableMng();
-            pnlMain.Controls.Add(table);
+            
+            fTableMng.BringToFront();
+        }
+
+        private void btnAdmin_Click(object sender, EventArgs e)
+        {
+            fAdmin.BringToFront();
         }
     }
 }
