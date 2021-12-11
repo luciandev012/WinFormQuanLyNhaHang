@@ -33,40 +33,40 @@ namespace WinFormQuanLyNhaHang.UI
             this.quanToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quảnLýLoạiMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dgvGood = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAddGood = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtGoodName = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.cmbCategory = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGoodCount = new System.Windows.Forms.TextBox();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cmbCategory = new System.Windows.Forms.ComboBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtGoodName = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.btnImage = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvGood = new System.Windows.Forms.DataGridView();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAddGood = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGood)).BeginInit();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -108,98 +108,31 @@ namespace WinFormQuanLyNhaHang.UI
             this.panel1.Size = new System.Drawing.Size(781, 572);
             this.panel1.TabIndex = 1;
             // 
-            // dgvGood
+            // panel7
             // 
-            this.dgvGood.AllowUserToAddRows = false;
-            this.dgvGood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id,
-            this.GoodName,
-            this.Price,
-            this.Count,
-            this.Image,
-            this.CategoryName});
-            this.dgvGood.Location = new System.Drawing.Point(3, 3);
-            this.dgvGood.Name = "dgvGood";
-            this.dgvGood.RowTemplate.Height = 200;
-            this.dgvGood.Size = new System.Drawing.Size(773, 322);
-            this.dgvGood.TabIndex = 0;
+            this.panel7.Controls.Add(this.cmbCategory);
+            this.panel7.Controls.Add(this.label4);
+            this.panel7.Location = new System.Drawing.Point(3, 475);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(512, 42);
+            this.panel7.TabIndex = 2;
             // 
-            // panel2
+            // cmbCategory
             // 
-            this.panel2.Controls.Add(this.btnAddGood);
-            this.panel2.Location = new System.Drawing.Point(801, 35);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(219, 572);
-            this.panel2.TabIndex = 2;
+            this.cmbCategory.FormattingEnabled = true;
+            this.cmbCategory.Location = new System.Drawing.Point(164, 3);
+            this.cmbCategory.Name = "cmbCategory";
+            this.cmbCategory.Size = new System.Drawing.Size(345, 32);
+            this.cmbCategory.TabIndex = 2;
             // 
-            // btnAddGood
+            // label4
             // 
-            this.btnAddGood.Location = new System.Drawing.Point(0, 3);
-            this.btnAddGood.Name = "btnAddGood";
-            this.btnAddGood.Size = new System.Drawing.Size(213, 56);
-            this.btnAddGood.TabIndex = 0;
-            this.btnAddGood.Text = "Thêm món";
-            this.btnAddGood.UseVisualStyleBackColor = true;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnImage);
-            this.panel3.Controls.Add(this.pictureBox1);
-            this.panel3.Location = new System.Drawing.Point(521, 331);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(252, 238);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.label1);
-            this.panel4.Controls.Add(this.txtGoodName);
-            this.panel4.Location = new System.Drawing.Point(3, 331);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(512, 42);
-            this.panel4.TabIndex = 2;
-            // 
-            // txtGoodName
-            // 
-            this.txtGoodName.Location = new System.Drawing.Point(164, 3);
-            this.txtGoodName.Name = "txtGoodName";
-            this.txtGoodName.Size = new System.Drawing.Size(345, 29);
-            this.txtGoodName.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(34, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 24);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Tên món:";
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.txtPrice);
-            this.panel5.Location = new System.Drawing.Point(3, 379);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(512, 42);
-            this.panel5.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 6);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 24);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Giá:";
-            // 
-            // txtPrice
-            // 
-            this.txtPrice.Location = new System.Drawing.Point(164, 3);
-            this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(345, 29);
-            this.txtPrice.TabIndex = 0;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(34, 6);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(88, 24);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Loại món";
             // 
             // panel6
             // 
@@ -226,39 +159,64 @@ namespace WinFormQuanLyNhaHang.UI
             this.txtGoodCount.Size = new System.Drawing.Size(345, 29);
             this.txtGoodCount.TabIndex = 0;
             // 
-            // panel7
+            // panel5
             // 
-            this.panel7.Controls.Add(this.cmbCategory);
-            this.panel7.Controls.Add(this.label4);
-            this.panel7.Location = new System.Drawing.Point(3, 475);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(512, 42);
-            this.panel7.TabIndex = 2;
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.txtPrice);
+            this.panel5.Location = new System.Drawing.Point(3, 379);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(512, 42);
+            this.panel5.TabIndex = 2;
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(34, 6);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(88, 24);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Loại món";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 6);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(43, 24);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Giá:";
             // 
-            // cmbCategory
+            // txtPrice
             // 
-            this.cmbCategory.FormattingEnabled = true;
-            this.cmbCategory.Location = new System.Drawing.Point(164, 3);
-            this.cmbCategory.Name = "cmbCategory";
-            this.cmbCategory.Size = new System.Drawing.Size(345, 32);
-            this.cmbCategory.TabIndex = 2;
+            this.txtPrice.Location = new System.Drawing.Point(164, 3);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(345, 29);
+            this.txtPrice.TabIndex = 0;
             // 
-            // pictureBox1
+            // panel4
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(246, 180);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.panel4.Controls.Add(this.label1);
+            this.panel4.Controls.Add(this.txtGoodName);
+            this.panel4.Location = new System.Drawing.Point(3, 331);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(512, 42);
+            this.panel4.TabIndex = 2;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(34, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 24);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Tên món:";
+            // 
+            // txtGoodName
+            // 
+            this.txtGoodName.Location = new System.Drawing.Point(164, 3);
+            this.txtGoodName.Name = "txtGoodName";
+            this.txtGoodName.Size = new System.Drawing.Size(345, 29);
+            this.txtGoodName.TabIndex = 0;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnImage);
+            this.panel3.Controls.Add(this.pictureBox1);
+            this.panel3.Location = new System.Drawing.Point(521, 331);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(252, 238);
+            this.panel3.TabIndex = 1;
             // 
             // btnImage
             // 
@@ -268,6 +226,32 @@ namespace WinFormQuanLyNhaHang.UI
             this.btnImage.TabIndex = 1;
             this.btnImage.Text = "Chọn ảnh";
             this.btnImage.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(246, 180);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // dgvGood
+            // 
+            this.dgvGood.AllowUserToAddRows = false;
+            this.dgvGood.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvGood.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.GoodName,
+            this.Price,
+            this.Count,
+            this.Image,
+            this.CategoryName});
+            this.dgvGood.Location = new System.Drawing.Point(3, 3);
+            this.dgvGood.Name = "dgvGood";
+            this.dgvGood.RowTemplate.Height = 200;
+            this.dgvGood.Size = new System.Drawing.Size(773, 322);
+            this.dgvGood.TabIndex = 0;
+            this.dgvGood.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGood_CellClick);
             // 
             // Id
             // 
@@ -311,6 +295,23 @@ namespace WinFormQuanLyNhaHang.UI
             this.CategoryName.HeaderText = "Tên loại";
             this.CategoryName.Name = "CategoryName";
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnAddGood);
+            this.panel2.Location = new System.Drawing.Point(801, 35);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(219, 572);
+            this.panel2.TabIndex = 2;
+            // 
+            // btnAddGood
+            // 
+            this.btnAddGood.Location = new System.Drawing.Point(0, 3);
+            this.btnAddGood.Name = "btnAddGood";
+            this.btnAddGood.Size = new System.Drawing.Size(213, 56);
+            this.btnAddGood.TabIndex = 0;
+            this.btnAddGood.Text = "Thêm món";
+            this.btnAddGood.UseVisualStyleBackColor = true;
+            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -326,18 +327,18 @@ namespace WinFormQuanLyNhaHang.UI
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvGood)).EndInit();
-            this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvGood)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
