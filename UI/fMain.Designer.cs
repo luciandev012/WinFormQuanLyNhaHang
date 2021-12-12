@@ -32,7 +32,6 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblUserFullname = new System.Windows.Forms.Label();
             this.btnAdmin = new System.Windows.Forms.Button();
-            this.btnStatistic = new System.Windows.Forms.Button();
             this.btnTableMng = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
             this.pnlMenu.SuspendLayout();
@@ -43,7 +42,6 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlMenu.Controls.Add(this.lblUserFullname);
             this.pnlMenu.Controls.Add(this.btnAdmin);
-            this.pnlMenu.Controls.Add(this.btnStatistic);
             this.pnlMenu.Controls.Add(this.btnTableMng);
             this.pnlMenu.Location = new System.Drawing.Point(2, 15);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(6);
@@ -62,7 +60,7 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(6, 297);
+            this.btnAdmin.Location = new System.Drawing.Point(6, 199);
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(6);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(223, 105);
@@ -70,16 +68,6 @@ namespace WinFormQuanLyNhaHang.UI
             this.btnAdmin.Text = "Quản lý món ăn";
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
-            // 
-            // btnStatistic
-            // 
-            this.btnStatistic.Location = new System.Drawing.Point(6, 189);
-            this.btnStatistic.Margin = new System.Windows.Forms.Padding(6);
-            this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(223, 105);
-            this.btnStatistic.TabIndex = 0;
-            this.btnStatistic.Text = "Thống kê doanh thu";
-            this.btnStatistic.UseVisualStyleBackColor = true;
             // 
             // btnTableMng
             // 
@@ -120,7 +108,6 @@ namespace WinFormQuanLyNhaHang.UI
 
         private System.Windows.Forms.Panel pnlMenu;
         private System.Windows.Forms.Button btnAdmin;
-        private System.Windows.Forms.Button btnStatistic;
         private System.Windows.Forms.Button btnTableMng;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label lblUserFullname;

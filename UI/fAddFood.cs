@@ -30,11 +30,18 @@ namespace WinFormQuanLyNhaHang.UI
             foreach(var item in listGood)
             {
                 Button btn = new Button() { Width = 200, Height = 200 };
-                btn.Text = item.Name + Environment.NewLine + item.Price.ToString();
+                Panel pnl = new Panel() { Width = 210, Height = 350 };
+                Label lbl = new Label() { Width = 200, Height = 120, AutoSize = false };
+                lbl.Location = new Point(0, 205);
+                lbl.Text = item.Name + Environment.NewLine + item.Price.ToString() + Environment.NewLine + "còn lại: " + item.Count;
+                //btn.Text = item.Name + Environment.NewLine + item.Price.ToString() + Environment.NewLine + "còn lại: " + item.Count;
+                btn.BackgroundImage = new Bitmap(Common.Common.GetImageDirect(item.Image));
+                btn.BackgroundImageLayout = ImageLayout.Stretch;
                 btn.Click += Btn_Click;
                 btn.Tag = item;
-                
-                flpFood.Controls.Add(btn);
+                pnl.Controls.Add(btn);
+                pnl.Controls.Add(lbl);
+                flpFood.Controls.Add(pnl);
             }    
         }
 
