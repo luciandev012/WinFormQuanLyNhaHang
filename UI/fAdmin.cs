@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,8 @@ namespace WinFormQuanLyNhaHang.UI
     {
         private GoodServices _goodServices;
         private CategoryServices _categoryServices;
+        private string imgName;
+        private int goodId;
         public fAdmin()
         {
             InitializeComponent();
@@ -32,6 +35,13 @@ namespace WinFormQuanLyNhaHang.UI
             cmbCategory.DataSource = listCategory;
             cmbCategory.DisplayMember = "Name";
             cmbCategory.ValueMember = "Id";
+        }
+        private void ResetData()
+        {
+            txtGoodCount.Text = "";
+            txtGoodName.Text = "";
+            txtPrice.Text = "";
+            pictureBox1.Image.Dispose();
         }
 
         private void quanToolStripMenuItem_Click(object sender, EventArgs e)
@@ -54,6 +64,74 @@ namespace WinFormQuanLyNhaHang.UI
             txtPrice.Text = row.Cells[2].Value.ToString();
             txtGoodCount.Text = row.Cells[3].Value.ToString();
             cmbCategory.Text = row.Cells[5].Value.ToString();
+            goodId = int.Parse(row.Cells[0].Value.ToString());
+        }
+
+        private void btnImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Filter = "png files(*.png)|*.png|jpg files(*.jpg)|*.jpg|All files(*.*)|*.*";
+            if(dialog.ShowDialog() == DialogResult.OK)
+            {
+                var imgLocation = dialog.FileName.ToString();
+                pictureBox1.ImageLocation = imgLocation;
+                imgName = Path.GetFileName(imgLocation);
+            }    
+        }
+
+        private void btnAddGood_Click(object sender, EventArgs e)
+        {
+            
+            var fileName = Path.Combine(Common.Common.GetFolderImage(), imgName);
+            pictureBox1.Image.Save(fileName);
+            var goodName = txtGoodName.Text;
+            var price = int.Parse(txtPrice.Text);
+            var count = int.Parse(txtGoodCount.Text);
+            var categoryId = int.Parse(cmbCategory.SelectedValue.ToString());
+            var res = _goodServices.Create(goodName, price, imgName, count, categoryId);
+            if(res > 0)
+            {
+                LoadData();
+                ResetData();
+            }
+            else
+            {
+                MessageBox.Show("Thêm không thành công!", "Thông báo");
+            }    
+        }
+
+        private void btnEditGood_Click(object sender, EventArgs e)
+        {
+            var fileName = Path.Combine(Common.Common.GetFolderImage(), imgName);
+            pictureBox1.Image.Save(fileName);
+            var goodName = txtGoodName.Text;
+            var price = int.Parse(txtPrice.Text);
+            var count = int.Parse(txtGoodCount.Text);
+            var categoryId = int.Parse(cmbCategory.SelectedValue.ToString());
+            var res = _goodServices.Edit(goodName, price, imgName, count, categoryId, goodId);
+            if (res > 0)
+            {
+                LoadData();
+                ResetData();
+            }
+            else
+            {
+                MessageBox.Show("Sửa không thành công!", "Thông báo");
+            }
+        }
+
+        private void btnDeleteGood_Click(object sender, EventArgs e)
+        {
+            var res = _goodServices.Delete(goodId);
+            if(res > 0)
+            {
+                LoadData();
+                ResetData();
+            }   
+            else
+            {
+                MessageBox.Show("Xoá không thành công!", "Thông báo");
+            }    
         }
     }
 }

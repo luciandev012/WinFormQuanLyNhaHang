@@ -59,6 +59,7 @@
     <Compile Include="Common\BillDetailViewModel.cs" />
     <Compile Include="Common\GoodVM.cs" />
     <Compile Include="Common\Response.cs" />
+    <Compile Include="Common\Common.cs" />
     <Compile Include="Common\UserSession.cs" />
     <Compile Include="Data\Entities\BillDetail.cs" />
     <Compile Include="Data\Entities\Category.cs" />
@@ -178,14 +179,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Asset\Image\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Asset\Icon\icons8-back-to-64.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Asset\Icon\icons8-next-page-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Asset\Image\coca-cola.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

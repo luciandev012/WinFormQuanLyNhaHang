@@ -36,18 +36,42 @@ namespace WinFormQuanLyNhaHang.Services
                     GoodName = item.g.Name,
                     Price = item.g.Price,
                     CategoryName = item.c.Name,
-                    Image = new Bitmap(GetImageDirect(item.g.Image))
+                    Image = new Bitmap(Common.Common.GetImageDirect(item.g.Image))
                 };
                 data.Add(goodVM);
             }    
             return data;
         }
-        private string GetImageDirect(string image)
+        public int Create(string goodName, int price, string image, int count, int categoryId)
         {
-            string appPath = Path.GetDirectoryName(Application.ExecutablePath).Replace(@"bin\Debug", string.Empty);
-            var folder = Path.Combine(appPath, @"Asset\Image");
-            var path = Path.Combine(folder, image);
-            return path;
+            var good = new Good()
+            {
+                Count = count,
+                Name = goodName,
+                Price = price,
+                Image = image,
+                CategoryId = categoryId
+            };
+            _context.Goods.Add(good);
+            return _context.SaveChanges();
+        }
+
+        public int Edit(string goodName, int price, string imgName, int count, int categoryId, int id)
+        {
+            var good = _context.Goods.Find(id);
+            good.Name = goodName;
+            good.Price = price;
+            good.Image = imgName;
+            good.Count = count;
+            good.CategoryId = categoryId;
+            return _context.SaveChanges();
+        }
+
+        public int Delete(int goodId)
+        {
+            var good = _context.Goods.Find(goodId);
+            _context.Goods.Remove(good);
+            return _context.SaveChanges();
         }
     }
 }

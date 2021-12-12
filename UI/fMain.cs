@@ -25,21 +25,23 @@ namespace WinFormQuanLyNhaHang.UI
         public void LoadData()
         {
             lblUserFullname.Text = "Xin chào " + UserSession.FullName + "!";
-            fAdmin = new fAdmin();
-            fTableMng = new fTableMng();
-            pnlMain.Controls.Add(fAdmin);
-            pnlMain.Controls.Add(fTableMng);
         }
         #endregion
 
         private void btnTableMng_Click(object sender, EventArgs e)
         {
-            
+            pnlMain.Controls.Clear();
+            fTableMng = new fTableMng();
+
+            pnlMain.Controls.Add(fTableMng);
             fTableMng.BringToFront();
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
+            pnlMain.Controls.Clear();
+            fAdmin = new fAdmin();
+            pnlMain.Controls.Add(fAdmin);
             fAdmin.BringToFront();
         }
     }
