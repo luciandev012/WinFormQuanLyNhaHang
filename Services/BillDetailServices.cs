@@ -57,5 +57,40 @@ namespace WinFormQuanLyNhaHang.Services
             _context.SaveChanges();
         }
 
+        public List<BillDetailViewModel> GetBillDetailsByTimestamp(DateTime timeStamp)
+        {
+            var bills = _context.Bills.ToList();
+            int billId = 0;
+            foreach(var item in bills)
+            {
+                if(CommpareTime(item.TimeStamp, timeStamp))
+                {
+                    billId = item.Id;
+                    break;
+                }    
+            }    
+            var listBill = _context.BillDetails.Where(x => x.BillId == billId).ToList();
+            var listBillVM = new List<BillDetailViewModel>();
+            foreach (var item in listBill)
+            {
+                var good = _context.Goods.Find(item.GoodId);
+                var billVM = new BillDetailViewModel()
+                {
+                    GoodName = good.Name,
+                    Count = item.Count,
+                    Price = item.Count * good.Price
+                };
+                listBillVM.Add(billVM);
+            }
+            return listBillVM;
+        }
+        private bool CommpareTime(DateTime a, DateTime b)
+        {
+            if (a.Year == b.Year && a.Month == b.Month && a.Day == b.Day && a.Hour == b.Hour && a.Minute == b.Minute && a.Second == b.Second)
+                return true;
+            else
+                return false;
+        }
+
     }
 }

@@ -11,5 +11,6 @@ namespace WinFormQuanLyNhaHang.Common
         public static int UserId { get; set; }
         public static string FullName { get; set; }
         public static string PhoneNumber { get; set; }
+        public static int Role { get; set; }
     }
 }

@@ -35,6 +35,7 @@ namespace WinFormQuanLyNhaHang.Data
             modelBuilder.Entity<Table>().ToTable("Tables").HasKey(e => e.Id);
 
             modelBuilder.Entity<Bill>().ToTable("Bills").HasKey(e => e.Id);
+            modelBuilder.Entity<Bill>().Property(x => x.TimeStamp).HasColumnType("datetime2");
             modelBuilder.Entity<Bill>().HasRequired(b => b.Table).WithMany(t => t.Bills).HasForeignKey(b => b.TableId).WillCascadeOnDelete(true);
             modelBuilder.Entity<Bill>().HasRequired(b => b.User).WithMany(u => u.Bills).HasForeignKey(b => b.UserId).WillCascadeOnDelete(true);
 

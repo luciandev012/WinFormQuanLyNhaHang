@@ -27,5 +27,21 @@ namespace WinFormQuanLyNhaHang.Services
             }
             return new Response<User>(true, "Đăng nhập thành công!", user);
         }
+        public List<UserVM> GetListUser()
+        {
+            var users = _context.Users.ToList();
+            var listUser = new List<UserVM>();
+            foreach(var item in users)
+            {
+                var userVM = new UserVM()
+                {
+                    Id = item.Id,
+                    FullName = item.Lastname + " " + item.FirstName,
+                    Username = item.Username
+                };
+                listUser.Add(userVM);
+            }
+            return listUser;
+        }
     }
 }

@@ -57,10 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\BillDetailViewModel.cs" />
+    <Compile Include="Common\BillVM.cs" />
     <Compile Include="Common\GoodVM.cs" />
     <Compile Include="Common\Response.cs" />
     <Compile Include="Common\Common.cs" />
     <Compile Include="Common\UserSession.cs" />
+    <Compile Include="Common\UserVM.cs" />
     <Compile Include="Data\Entities\BillDetail.cs" />
     <Compile Include="Data\Entities\Category.cs" />
     <Compile Include="Data\Entities\Good.cs" />
@@ -82,6 +84,10 @@
     <Compile Include="Migrations\202112081612171_Add_Full_Database.cs" />
     <Compile Include="Migrations\202112081612171_Add_Full_Database.designer.cs">
       <DependentUpon>202112081612171_Add_Full_Database.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202112130348433_Edit_Timestamp_Type.cs" />
+    <Compile Include="Migrations\202112130348433_Edit_Timestamp_Type.designer.cs">
+      <DependentUpon>202112130348433_Edit_Timestamp_Type.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
@@ -122,6 +128,12 @@
     <Compile Include="UI\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\fStatistic.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\fStatistic.Designer.cs">
+      <DependentUpon>fStatistic.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\fTableMng.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +148,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202112081612171_Add_Full_Database.resx">
       <DependentUpon>202112081612171_Add_Full_Database.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202112130348433_Edit_Timestamp_Type.resx">
+      <DependentUpon>202112130348433_Edit_Timestamp_Type.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -161,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UI\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\fStatistic.resx">
+      <DependentUpon>fStatistic.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\fTableMng.resx">
       <DependentUpon>fTableMng.cs</DependentUpon>

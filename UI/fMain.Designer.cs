@@ -34,6 +34,7 @@ namespace WinFormQuanLyNhaHang.UI
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnTableMng = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.btnStatistic = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlMenu.Controls.Add(this.lblUserFullname);
             this.pnlMenu.Controls.Add(this.btnAdmin);
+            this.pnlMenu.Controls.Add(this.btnStatistic);
             this.pnlMenu.Controls.Add(this.btnTableMng);
             this.pnlMenu.Location = new System.Drawing.Point(2, 15);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(6);
@@ -60,7 +62,7 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(6, 199);
+            this.btnAdmin.Location = new System.Drawing.Point(6, 323);
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(6);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(223, 105);
@@ -88,6 +90,17 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMain.Size = new System.Drawing.Size(1023, 728);
             this.pnlMain.TabIndex = 1;
             // 
+            // btnStatistic
+            // 
+            this.btnStatistic.Location = new System.Drawing.Point(6, 199);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(6);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(223, 105);
+            this.btnStatistic.TabIndex = 0;
+            this.btnStatistic.Text = "Thống kê";
+            this.btnStatistic.UseVisualStyleBackColor = true;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
+            // 
             // fMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
@@ -111,5 +124,6 @@ namespace WinFormQuanLyNhaHang.UI
         private System.Windows.Forms.Button btnTableMng;
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label lblUserFullname;
+        private System.Windows.Forms.Button btnStatistic;
     }
 }

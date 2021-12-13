@@ -15,6 +15,7 @@ namespace WinFormQuanLyNhaHang.UI
     {
         private fAdmin fAdmin;
         private fTableMng fTableMng;
+        private fStatistic fStatistic;
         public fMain()
         {
             InitializeComponent();
@@ -25,6 +26,11 @@ namespace WinFormQuanLyNhaHang.UI
         public void LoadData()
         {
             lblUserFullname.Text = "Xin chào " + UserSession.FullName + "!";
+            if(UserSession.Role == 2)
+            {
+                btnAdmin.Visible = false;
+                btnStatistic.Visible = false;
+            }
         }
         #endregion
 
@@ -43,6 +49,14 @@ namespace WinFormQuanLyNhaHang.UI
             fAdmin = new fAdmin();
             pnlMain.Controls.Add(fAdmin);
             fAdmin.BringToFront();
+        }
+
+        private void btnStatistic_Click(object sender, EventArgs e)
+        {
+            pnlMain.Controls.Clear();
+            fStatistic = new fStatistic();
+            pnlMain.Controls.Add(fStatistic);
+            fStatistic.BringToFront();
         }
     }
 }

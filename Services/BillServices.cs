@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WinFormQuanLyNhaHang.Common;
 using WinFormQuanLyNhaHang.Data;
 using WinFormQuanLyNhaHang.Data.Entities;
 
@@ -43,6 +44,26 @@ namespace WinFormQuanLyNhaHang.Services
             var bill = _context.Bills.Where(x => x.TableId == tableId && x.IsPaid == false).FirstOrDefault();
             bill.IsPaid = true;
             _context.SaveChanges();
+        }
+        public List<BillVM> GetListBill(DateTime start, DateTime end)
+        {
+            var query = from b in _context.Bills
+                        join u in _context.Users on b.UserId equals u.Id
+                        join t in _context.Tables on b.TableId equals t.Id
+                        where b.TimeStamp >= start && b.TimeStamp <= end
+                        select new { b, u, t };
+            var data = query.Select(x => new BillVM()
+            {
+                TimeStamp = x.b.TimeStamp,
+                CustomerName = x.b.CustomerName,
+                Table = x.t.Name,
+                Total = x.b.Total.ToString(),
+                UserName = x.u.Lastname + " " + x.u.FirstName
+            }).ToList();
+
+            //var bills = _context.Bills.Where(x => x.TimeStamp > start && x.TimeStamp < end).ToList();
+            //var listBillVM = new List<BillVM>();
+            return data;
         }
     }
 }

@@ -46,7 +46,8 @@ namespace WinFormQuanLyNhaHang
             {
                 UserSession.UserId = res.ResponseObj.Id;
                 UserSession.PhoneNumber = res.ResponseObj.PhoneNumber;
-                UserSession.FullName = res.ResponseObj.FirstName + " " + res.ResponseObj.Lastname;
+                UserSession.FullName = res.ResponseObj.Lastname + " " + res.ResponseObj.FirstName;
+                UserSession.Role = res.ResponseObj.RoleId;
                 fMain f = new fMain();
                 this.Hide();
                 f.ShowDialog();
