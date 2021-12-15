@@ -82,42 +82,56 @@ namespace WinFormQuanLyNhaHang.UI
         private void btnAddGood_Click(object sender, EventArgs e)
         {
             
-            var fileName = Path.Combine(Common.Common.GetFolderImage(), imgName);
-            pictureBox1.Image.Save(fileName);
-            var goodName = txtGoodName.Text;
-            var price = int.Parse(txtPrice.Text);
-            var count = int.Parse(txtGoodCount.Text);
-            var categoryId = int.Parse(cmbCategory.SelectedValue.ToString());
-            var res = _goodServices.Create(goodName, price, imgName, count, categoryId);
-            if(res > 0)
+            if(txtGoodName.Text != "" && txtGoodCount.Text != "" && txtPrice.Text != "")
             {
-                LoadData();
-                ResetData();
-            }
+                var fileName = Path.Combine(Common.Common.GetFolderImage(), imgName);
+                pictureBox1.Image.Save(fileName);
+                var goodName = txtGoodName.Text;
+                var price = int.Parse(txtPrice.Text);
+                var count = int.Parse(txtGoodCount.Text);
+                var categoryId = int.Parse(cmbCategory.SelectedValue.ToString());
+                var res = _goodServices.Create(goodName, price, imgName, count, categoryId);
+                if (res > 0)
+                {
+                    LoadData();
+                    ResetData();
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công!", "Thông báo");
+                }
+            }    
             else
             {
-                MessageBox.Show("Thêm không thành công!", "Thông báo");
+                MessageBox.Show("Bạn phải nhập món!", "Thông báo");
             }    
         }
 
         private void btnEditGood_Click(object sender, EventArgs e)
         {
-            var fileName = Path.Combine(Common.Common.GetFolderImage(), imgName);
-            pictureBox1.Image.Save(fileName);
-            var goodName = txtGoodName.Text;
-            var price = int.Parse(txtPrice.Text);
-            var count = int.Parse(txtGoodCount.Text);
-            var categoryId = int.Parse(cmbCategory.SelectedValue.ToString());
-            var res = _goodServices.Edit(goodName, price, imgName, count, categoryId, goodId);
-            if (res > 0)
+            if (txtGoodName.Text != "" && txtGoodCount.Text != "" && txtPrice.Text != "")
             {
-                LoadData();
-                ResetData();
-            }
+                var fileName = Path.Combine(Common.Common.GetFolderImage(), imgName);
+                pictureBox1.Image.Save(fileName);
+                var goodName = txtGoodName.Text;
+                var price = int.Parse(txtPrice.Text);
+                var count = int.Parse(txtGoodCount.Text);
+                var categoryId = int.Parse(cmbCategory.SelectedValue.ToString());
+                var res = _goodServices.Edit(goodName, price, imgName, count, categoryId, goodId);
+                if (res > 0)
+                {
+                    LoadData();
+                    ResetData();
+                }
+                else
+                {
+                    MessageBox.Show("Sửa không thành công!", "Thông báo");
+                }
+            }  
             else
             {
-                MessageBox.Show("Sửa không thành công!", "Thông báo");
-            }
+                MessageBox.Show("Bạn phải nhập món!", "Thông báo");
+            }    
         }
 
         private void btnDeleteGood_Click(object sender, EventArgs e)
