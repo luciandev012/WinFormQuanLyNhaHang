@@ -78,5 +78,7 @@ namespace WinFormQuanLyNhaHang.UI
             var billDetails = _detailServices.GetBillDetailsByTimestamp(timeStamp);
             dgvBillDetail.DataSource = billDetails;
         }
+
+        
     }
 }

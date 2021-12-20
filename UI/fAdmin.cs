@@ -133,5 +133,11 @@ namespace WinFormQuanLyNhaHang.UI
                 MessageBox.Show("Xoá không thành công!", "Thông báo");
             }    
         }
+
+        private void quảnLýLoạiMónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fUser fUser = new fUser();
+            fUser.ShowDialog();
+        }
     }
 }

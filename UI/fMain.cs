@@ -58,5 +58,13 @@ namespace WinFormQuanLyNhaHang.UI
             pnlMain.Controls.Add(fStatistic);
             fStatistic.BringToFront();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Bạn có muốn đăng xuất?", "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                Close();
+            }
+        }
     }
 }

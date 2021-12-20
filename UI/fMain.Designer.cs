@@ -32,9 +32,10 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMenu = new System.Windows.Forms.Panel();
             this.lblUserFullname = new System.Windows.Forms.Label();
             this.btnAdmin = new System.Windows.Forms.Button();
+            this.btnStatistic = new System.Windows.Forms.Button();
             this.btnTableMng = new System.Windows.Forms.Button();
             this.pnlMain = new System.Windows.Forms.Panel();
-            this.btnStatistic = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             this.pnlMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,6 +43,7 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             this.pnlMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.pnlMenu.Controls.Add(this.lblUserFullname);
+            this.pnlMenu.Controls.Add(this.btnLogout);
             this.pnlMenu.Controls.Add(this.btnAdmin);
             this.pnlMenu.Controls.Add(this.btnStatistic);
             this.pnlMenu.Controls.Add(this.btnTableMng);
@@ -62,14 +64,25 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             // btnAdmin
             // 
-            this.btnAdmin.Location = new System.Drawing.Point(6, 323);
+            this.btnAdmin.Location = new System.Drawing.Point(6, 316);
             this.btnAdmin.Margin = new System.Windows.Forms.Padding(6);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(223, 105);
             this.btnAdmin.TabIndex = 0;
-            this.btnAdmin.Text = "Quản lý món ăn";
+            this.btnAdmin.Text = "Quản lý";
             this.btnAdmin.UseVisualStyleBackColor = true;
             this.btnAdmin.Click += new System.EventHandler(this.btnAdmin_Click);
+            // 
+            // btnStatistic
+            // 
+            this.btnStatistic.Location = new System.Drawing.Point(6, 199);
+            this.btnStatistic.Margin = new System.Windows.Forms.Padding(6);
+            this.btnStatistic.Name = "btnStatistic";
+            this.btnStatistic.Size = new System.Drawing.Size(223, 105);
+            this.btnStatistic.TabIndex = 0;
+            this.btnStatistic.Text = "Thống kê";
+            this.btnStatistic.UseVisualStyleBackColor = true;
+            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
             // 
             // btnTableMng
             // 
@@ -90,16 +103,16 @@ namespace WinFormQuanLyNhaHang.UI
             this.pnlMain.Size = new System.Drawing.Size(1023, 728);
             this.pnlMain.TabIndex = 1;
             // 
-            // btnStatistic
+            // btnLogout
             // 
-            this.btnStatistic.Location = new System.Drawing.Point(6, 199);
-            this.btnStatistic.Margin = new System.Windows.Forms.Padding(6);
-            this.btnStatistic.Name = "btnStatistic";
-            this.btnStatistic.Size = new System.Drawing.Size(223, 105);
-            this.btnStatistic.TabIndex = 0;
-            this.btnStatistic.Text = "Thống kê";
-            this.btnStatistic.UseVisualStyleBackColor = true;
-            this.btnStatistic.Click += new System.EventHandler(this.btnStatistic_Click);
+            this.btnLogout.Location = new System.Drawing.Point(6, 617);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(6);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(223, 105);
+            this.btnLogout.TabIndex = 0;
+            this.btnLogout.Text = "Đăng xuất";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // fMain
             // 
@@ -125,5 +138,6 @@ namespace WinFormQuanLyNhaHang.UI
         private System.Windows.Forms.Panel pnlMain;
         private System.Windows.Forms.Label lblUserFullname;
         private System.Windows.Forms.Button btnStatistic;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

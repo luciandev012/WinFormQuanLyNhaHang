@@ -56,9 +56,9 @@ namespace WinFormQuanLyNhaHang.UI
             this.Image = new System.Windows.Forms.DataGridViewImageColumn();
             this.CategoryName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnAddGood = new System.Windows.Forms.Button();
-            this.btnEditGood = new System.Windows.Forms.Button();
             this.btnDeleteGood = new System.Windows.Forms.Button();
+            this.btnEditGood = new System.Windows.Forms.Button();
+            this.btnAddGood = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -94,8 +94,9 @@ namespace WinFormQuanLyNhaHang.UI
             // 
             this.quảnLýLoạiMónToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quảnLýLoạiMónToolStripMenuItem.Name = "quảnLýLoạiMónToolStripMenuItem";
-            this.quảnLýLoạiMónToolStripMenuItem.Size = new System.Drawing.Size(164, 28);
-            this.quảnLýLoạiMónToolStripMenuItem.Text = "Quản lý loại món";
+            this.quảnLýLoạiMónToolStripMenuItem.Size = new System.Drawing.Size(175, 28);
+            this.quảnLýLoạiMónToolStripMenuItem.Text = "Quản lý nhân viên";
+            this.quảnLýLoạiMónToolStripMenuItem.Click += new System.EventHandler(this.quảnLýLoạiMónToolStripMenuItem_Click);
             // 
             // panel1
             // 
@@ -309,15 +310,15 @@ namespace WinFormQuanLyNhaHang.UI
             this.panel2.Size = new System.Drawing.Size(219, 572);
             this.panel2.TabIndex = 2;
             // 
-            // btnAddGood
+            // btnDeleteGood
             // 
-            this.btnAddGood.Location = new System.Drawing.Point(0, 3);
-            this.btnAddGood.Name = "btnAddGood";
-            this.btnAddGood.Size = new System.Drawing.Size(213, 56);
-            this.btnAddGood.TabIndex = 0;
-            this.btnAddGood.Text = "Thêm món";
-            this.btnAddGood.UseVisualStyleBackColor = true;
-            this.btnAddGood.Click += new System.EventHandler(this.btnAddGood_Click);
+            this.btnDeleteGood.Location = new System.Drawing.Point(0, 127);
+            this.btnDeleteGood.Name = "btnDeleteGood";
+            this.btnDeleteGood.Size = new System.Drawing.Size(213, 56);
+            this.btnDeleteGood.TabIndex = 0;
+            this.btnDeleteGood.Text = "Xoá món";
+            this.btnDeleteGood.UseVisualStyleBackColor = true;
+            this.btnDeleteGood.Click += new System.EventHandler(this.btnDeleteGood_Click);
             // 
             // btnEditGood
             // 
@@ -329,15 +330,15 @@ namespace WinFormQuanLyNhaHang.UI
             this.btnEditGood.UseVisualStyleBackColor = true;
             this.btnEditGood.Click += new System.EventHandler(this.btnEditGood_Click);
             // 
-            // btnDeleteGood
+            // btnAddGood
             // 
-            this.btnDeleteGood.Location = new System.Drawing.Point(0, 127);
-            this.btnDeleteGood.Name = "btnDeleteGood";
-            this.btnDeleteGood.Size = new System.Drawing.Size(213, 56);
-            this.btnDeleteGood.TabIndex = 0;
-            this.btnDeleteGood.Text = "Xoá món";
-            this.btnDeleteGood.UseVisualStyleBackColor = true;
-            this.btnDeleteGood.Click += new System.EventHandler(this.btnDeleteGood_Click);
+            this.btnAddGood.Location = new System.Drawing.Point(0, 3);
+            this.btnAddGood.Name = "btnAddGood";
+            this.btnAddGood.Size = new System.Drawing.Size(213, 56);
+            this.btnAddGood.TabIndex = 0;
+            this.btnAddGood.Text = "Thêm món";
+            this.btnAddGood.UseVisualStyleBackColor = true;
+            this.btnAddGood.Click += new System.EventHandler(this.btnAddGood_Click);
             // 
             // fAdmin
             // 

@@ -43,5 +43,29 @@ namespace WinFormQuanLyNhaHang.Services
             }
             return listUser;
         }
+        public List<User> GetUsers()
+        {
+            return _context.Users.ToList();
+        }
+        public bool Create(User user)
+        {
+            _context.Users.Add(user);
+            return _context.SaveChanges() > 0;
+        }
+        public bool Edit(User user)
+        {
+            var u = _context.Users.Find(user.Id);
+            u.Password = user.Password;
+            u.PhoneNumber = user.PhoneNumber;
+            u.Lastname = user.Lastname;
+            u.FirstName = user.FirstName;
+            return _context.SaveChanges() > 0;
+        }
+        public bool Delete(int id)
+        {
+            var user = _context.Users.Find(id);
+            _context.Users.Remove(user);
+            return _context.SaveChanges() > 0;
+        }
     }
 }

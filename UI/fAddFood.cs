@@ -32,6 +32,7 @@ namespace WinFormQuanLyNhaHang.UI
                 Button btn = new Button() { Width = 200, Height = 200 };
                 Panel pnl = new Panel() { Width = 210, Height = 350 };
                 Label lbl = new Label() { Width = 200, Height = 120, AutoSize = false };
+
                 lbl.Location = new Point(0, 205);
                 lbl.Text = item.Name + Environment.NewLine + item.Price.ToString() + Environment.NewLine + "còn lại: " + item.Count;
                 //btn.Text = item.Name + Environment.NewLine + item.Price.ToString() + Environment.NewLine + "còn lại: " + item.Count;
